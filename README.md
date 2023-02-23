@@ -43,6 +43,6 @@ After exploring A-Records, we can review how DNS cache works. Inside of the DC, 
 <img src="https://imgur.com/Ke92Fd6.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Inside of the Server Manager, we can create CNAME Records, as well. This record will point the host name to a target host (i.e. website). Thus, we can right click under Forward Lookup --> click on "New" and "Alias CNAME". Next, we can ping "search" and "nslookup in command line on Client-1 to review that the hostname "search" points toward the "website" (ie. google.com).
 </p>
 <br />
