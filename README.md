@@ -2,7 +2,7 @@
 <img src="https://i.imgur.com/pU5A58S.png" alt="Microsoft Active Directory Logo"/>
 </p>
 
-<h1></h1>
+<h1>Understanding DNS in a Domain Controller</h1>
 This tutorial extends the on-premises Active Directory within Azure. This tutorial demonstrates creating A-Records and CNAME Records in Active Directoty. Also, this tutorial explores the need for Domain Name System (DNS).<br />
 
 <h2>Environments and Technologies Used</h2>
