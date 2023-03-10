@@ -35,7 +35,7 @@ After logging into the Domain Controller and Client computer, we can login to th
 <img src="https://imgur.com/kMJS8WN.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-After exploring A-Records, we can review how DNS cache works. Inside of the DC, we can edit the A-record "mainframe" by updating the IP address to 8.8.8.8. Next, we can go back to Client 1 and ping "mainframe" in the command line and observe that the old IP address still remains. To observe the local DNS cache we can enter "ipconfig /all" to see that the old IP address is still listed. Next, we can flush the DNS cache by entering "ipconfig /flushDNS" to remove the previous cache. Lastly, we can ping "mainframe" again and observe that the new IP address was added, as the previous cache was flushed. This exercise showcases the importance of flushing cache and ensuring that they DNS is up-to-date.
+Inside of the DC, we can edit the A-record "mainframe" by updating the IP address to 8.8.8.8. Next, we can go back to Client 1 and ping "mainframe" in the command line and observe that the old IP address still remains. To observe the local DNS cache we can enter "ipconfig /all" to see that the old IP address is still listed. Next, we can flush the DNS cache by entering "ipconfig /flushDNS" to remove the previous cache. Lastly, we can ping "mainframe" again and observe that the new IP address was added, as the previous cache was flushed. This exercise showcases the importance of flushing cache and ensuring that they DNS is up-to-date.
 </p>
 <br />
 <h2>Creating CNAME Records in Active Directory</h2>
