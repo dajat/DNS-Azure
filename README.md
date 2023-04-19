@@ -27,7 +27,7 @@ This tutorial extends the on-premises Active Directory and demonstrates creating
 <img src="https://imgur.com/Vq7LKbz.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-After logging into the Domain Controller and Client computer, we can login to the Server Manager under the Domain Controller, --> click on "Tools" and "DNS" Inside of DNS, we can create A-Name Records under Forward Lookup Zones. This zone allows you to map hostnames to IP address in Active Directory and reviews the current A-records that were created when Active Directory was installed. Reserve lookup zone allows you to to map IP addresses to hostnames. To create a new A-Record, right-click inside of "domain url under Forward Lookup Zones", select "New" and "New Host (A or AAA). For this exercise, create "mainframe" as parent domain and copy and paste the DC's Private IP address from the Microsoft Azure Portal. Next, ping "mainframe" in Command line in Client 1 to review that the ping has succeeded and replies to the hostname's DNS.
+After logging into the Domain Controller and Client computer, we can login to the Server Manager under the Domain Controller, --> click on "Tools" and "DNS" Inside of DNS, we can create A-Name Records under Forward Lookup Zones. This zone allows you to map hostnames to IP address in Active Directory and reviews the current A-records that were created when Active Directory was installed. Reserve lookup zone allows you to map IP addresses to hostnames. To create a new A-Record, right-click inside of "domain url under Forward Lookup Zones", select "New" and "New Host (A or AAA). For this exercise, create "mainframe" as the parent domain and copy and paste the DC's Private IP address from the Microsoft Azure Portal. Next, ping "mainframe" in Command line in Client 1 to review that the ping has succeeded and replies to the hostname's DNS.
 </p>
 <br />
 <h2>Exploring DNS Cache</h2>
@@ -35,7 +35,7 @@ After logging into the Domain Controller and Client computer, we can login to th
 <img src="https://imgur.com/kMJS8WN.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Inside of the DC, we can edit the A-record "mainframe" by updating the IP address to 8.8.8.8. Next, we can go back to Client 1 and ping "mainframe" in the command line and observe that the old IP address still remains. To observe the local DNS cache we can enter "ipconfig /all" to see that the old IP address is still listed. Next, we can flush the DNS cache by entering "ipconfig /flushDNS" to remove the previous cache. Lastly, we can ping "mainframe" again and observe that the new IP address was added, as the previous cache was flushed. This exercise showcases the importance of flushing cache and ensuring that they DNS is up-to-date.
+Inside of the DC, we can edit the A-record "mainframe" by updating the IP address to 8.8.8.8. Next, we can go back to Client 1 and ping "mainframe" in the command line and observe that the old IP address still remains. To observe the local DNS cache we can enter "ipconfig /all" to see that the old IP address is still listed. Next, we can flush the DNS cache by entering "ipconfig /flushDNS" to remove the previous cache. Lastly, we can ping "mainframe" again and observe that the new IP address was added. This exercise showcases the importance of flushing cache and ensuring that the DNS is up-to-date.
 </p>
 <br />
 <h2>Creating CNAME Records in Active Directory</h2>
